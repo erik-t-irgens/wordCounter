@@ -22,10 +22,11 @@ _The user may input, when prompted, a WORD as well as a SENTENCE. The user is th
 * _Clone down the repository from https://github.com/erik-t-irgens/wordCounter . _
 * _If you'd like to run tests, navigate (in console) to the WordCounter.Tests directory and execute "dotnet resolve", then run "dotnet test" to see that the tests have passed._
 * _To run the program proper, navigate (in console) to WordCounter directory, and run "dotnet run"._
+* _MAKE SURE THAT YOUR CONSOLE IS RESIZED TO BE LARGE ENOUGH TO HANDLE THE LENGTH OF YOUR SENTENCE OR WORD! (See known bugs)_
 
 ## Known Bugs
 
-_No known bugs_
+_The only known bug has to do with my styling. MAKE SURE that - when your input a word or sentence - that it is no longer than the width of the console (it will only contain one line). Otherwise, there will be an error due to the way I have centered all of my text._
 
 ## Support and contact details
 
