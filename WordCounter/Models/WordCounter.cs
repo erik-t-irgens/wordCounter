@@ -27,7 +27,7 @@ namespace WordCounters.Models
             int wordCount = 0;
             for (int i = 0; i < words.Length; i++)
             {
-                if (words[i] == word)
+                if (words[i] == userWord)
                 {
                     wordCount += 1;
                 }

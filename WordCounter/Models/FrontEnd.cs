@@ -17,11 +17,11 @@ namespace WordCounters.FrontEnd
         public static void Main()
         {
             Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.BackgroundColor = ConsoleColor.Black;
             PrintCenter("Hello, user. Today we are going to ask you to enter some things into your CONSOLE...");
             Thread.Sleep(1000);
-            PrintCenter("First, input a single WORD");
+            PrintCenter("First, input a single WORD...");
             string userWordInput = Console.ReadLine();
             if (userWordInput.Contains(" "))
             {
@@ -36,7 +36,7 @@ namespace WordCounters.FrontEnd
             Console.ForegroundColor = ConsoleColor.White;
             PrintCenter("You chose to input the word " + userWordInput);
             Thread.Sleep(1000);
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Cyan;
             PrintCenter("Now, input a SENTENCE...");
             string userSentenceInput = Console.ReadLine();
             Thread.Sleep(1000);
@@ -44,7 +44,7 @@ namespace WordCounters.FrontEnd
             PrintCenter("You chose to input the sentence " + userSentenceInput);
             Thread.Sleep(1000);
             WordCounter userConstruction = new WordCounter(userWordInput, userSentenceInput);
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Cyan;
             PrintCenter("Do you want me to tell you how many times your WORD is contained in your SENTENCE.");
             PrintCenter("(Yes/No)");
             string userReply = Console.ReadLine();
@@ -55,7 +55,7 @@ namespace WordCounters.FrontEnd
                 PrintCenter("You chose " + userReply.ToUpper());
                 Thread.Sleep(1000);
                 Console.Clear();
-                Console.ForegroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Thread.Sleep(1000);
                 PrintCenter("Your word is contained within your sentence " + userConstruction.CountWords(userConstruction.RemovePunctuation(userConstruction.Sentence), userConstruction.Word) + " time(s)!");
                 Thread.Sleep(1000);
