@@ -37,7 +37,7 @@ namespace WordCounters.FrontEnd
             PrintCenter("You chose to input the word " + userWordInput);
             Thread.Sleep(1000);
             Console.ForegroundColor = ConsoleColor.Green;
-            PrintCenter("Now, input a SENTENCE that CONTAINS your WORD...");
+            PrintCenter("Now, input a SENTENCE...");
             string userSentenceInput = Console.ReadLine();
             Thread.Sleep(1000);
             Console.ForegroundColor = ConsoleColor.White;
@@ -45,9 +45,7 @@ namespace WordCounters.FrontEnd
             Thread.Sleep(1000);
             WordCounter userConstruction = new WordCounter(userWordInput, userSentenceInput);
             Console.ForegroundColor = ConsoleColor.Green;
-            PrintCenter("Now, I will tell you how many times your WORD is contained in your SENTENCE.");
-            Thread.Sleep(1000);
-            PrintCenter("Are you ready?");
+            PrintCenter("Do you want me to tell you how many times your WORD is contained in your SENTENCE.");
             PrintCenter("(Yes/No)");
             string userReply = Console.ReadLine();
             userReply = userReply.ToLower();
@@ -67,7 +65,23 @@ namespace WordCounters.FrontEnd
 
                 PrintCenter("Your sentence: " + userConstruction.Sentence);
 
-
+                Thread.Sleep(1000);
+                PrintCenter("Would you like to try another sentence?");
+                string userReply2 = Console.ReadLine();
+                userReply2 = userReply2.ToLower();
+                if (userReply2 == "yes")
+                {
+                    PrintCenter("Starting...");
+                    Thread.Sleep(2000);
+                    Main();
+                }
+                else if (userReply2 == "no")
+                {
+                    PrintCenter("You chose " + userReply2.ToUpper());
+                    Thread.Sleep(1000);
+                    PrintCenter("Thanks for participating!");
+                    Thread.Sleep(2000);
+                }
 
             }
             else if (userReply == "no")
